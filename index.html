@@ -13,18 +13,22 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <title>Trivia Game</title>
+    
 </head>
 <body>
     <div class="container text-center">
+        <div>
+            <div class="endGame"></div>
+        </div>
         <div class="container" id="game">
-    <h1>At a Trivia Night Far Far Away...</h1>
-    <h2 id="time-left">60</h2>
+        <h1>At a Trivia Night Far Far Away...</h1>
+        <h2 id="time-left">60</h2>
     <form>
         <h2>Who is the best bounty hunter?</h2>
-        <input type="radio" name="bountyHunter" value="IG-88" class="question0"> IG-88 <br>
-        <input type="radio" name="bountyHunter" value="Bossk" class="question0"> Bossk <br>
-        <input type="radio" name="bountyHunter" value="Boba Fett" class="question0"> Boba Fett <br>
-        <input type="radio" name="bountyHunter" value="Dengar" class="question0"> Dengar <br>
+        <input type="radio" name="bountyHunter" value="IG-88" class="question0" color:#999> IG-88 <br>
+        <input type="radio" name="bountyHunter" value="Bossk" class="question0" color:#999> Bossk <br>
+        <input type="radio" name="bountyHunter" value="Boba Fett" class="question0" color:#999> Boba Fett <br>
+        <input type="radio" name="bountyHunter" value="Dengar" class="question0" color:#999> Dengar <br>
 
         <h2>Who is the best Jedi Master?</h2>
         <input type="radio" name="jedi" value="Mace Windu" class="question1"> Mace Windu <br>
@@ -61,6 +65,7 @@
     Don't let the player pick more than one answer per question.
     Don't forget to include a countdown timer. -->
         </div>
+        
         <div class="container" id="start"><button class="myButton">Start</button></div>
     </div>
     <script src="assets/javascript/app.js"></script>

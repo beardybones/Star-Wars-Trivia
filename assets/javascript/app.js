@@ -2,6 +2,7 @@ $(document).ready(function () {
 //Create Start Button to start game
     //needs to be hidden?
 $("#game").hide();
+$(".endGame").hide();
 $("#start").click(function(){
     $("#game").show();
     $("#start").hide();
@@ -86,18 +87,19 @@ $("#submit").on("click", function(event){
     event.preventDefault();
     // console.log($("input[name='bountyHunter']:checked").val());
     bh = ($("input[name='bountyHunter']:checked").val());
-    if(bh === undefined) {
+    // console.log(bh);
+    if(!bh) {
         unanswered++;
-        console.log(unanswered);
+        console.log("U:" + unanswered);
     } else {
         if (bh === "Boba Fett"){
-            console.log(true);
+            // console.log(true);
             correct++;
-            console.log(correct);
+             console.log("C:" + correct);
         } else {
-            console.log(false);
+            // console.log(false);
             incorrect++;
-            console.log(incorrect);
+             console.log("I:" + incorrect);
         }
     }
 });
@@ -106,18 +108,18 @@ $("#submit").on("click", function(event){
     event.preventDefault();
     // console.log($("input[name='jedi']:checked").val());
     jedi = ($("input[name='jedi']:checked").val());
-    if(bh === undefined) {
+    if(!jedi) {
         unanswered++;
-        console.log(unanswered);
+        console.log("U:" + unanswered);
     } else {
         if (jedi === "Obi-Wan Kenobi"){
-            console.log(true);
+            // console.log(true);
             correct++;
-            console.log(correct);
+             console.log("C:" + correct);
         } else {
-            console.log(false);
+            // console.log(false);
             incorrect++;
-            console.log(incorrect);
+             console.log("I:" + incorrect);
         }
     }
 });
@@ -126,10 +128,21 @@ $("#submit").on("click", function(event){
     event.preventDefault();
     // console.log($("input[name='pilot']:checked").val());
     pilot = ($("input[name='pilot']:checked").val());
-    if (pilot === "Wedge Antilles"){
-        console.log(true);
+    if(!pilot) {
+        unanswered++;
+        console.log("U:" + unanswered);
     } else {
-        console.log(false);
+        if (pilot === "Wedge Antilles"){
+            // console.log(true);
+            correct++;
+            console.log("C:" + correct);
+        } else {
+            // console.log(false);
+            incorrect++;
+            console.log("I:" + incorrect);
+        }   
+            
+        
     }
 });
 
@@ -137,15 +150,34 @@ $("#submit").on("click", function(event){
     event.preventDefault();
     // console.log($("input[name='lightsaber']:checked").val());
     ls = ($("input[name='lightsaber']:checked").val());
-    if (ls === "Purple"){
-        console.log(true);
+    if(!ls) {
+        unanswered++;
+        console.log("U:" + unanswered);
     } else {
-        console.log(false);
+        if (ls === "Purple"){
+            // console.log(true);
+            correct++;
+             console.log("C:" + correct);
+        } else {
+            // console.log(false);
+            incorrect++;
+            console.log("I:" + incorrect);
+        }   
+             
+        
     }
 });
 
 
-
+$("#submit").on("click", function(event){
+    event.preventDefault();
+    stop();
+    $("#game").hide();
+    $(".endGame").show();
+    $(".endGame").append("<h1 id='eg'>Correct: " + correct + "</h1>");
+    $(".endGame").append("<h1 id='eg'>Inorrect: " + incorrect + "</h1>");
+    $(".endGame").append("<h1 id='eg'>Unanswered: " + unanswered + "</h1>");
+});
 
 
 

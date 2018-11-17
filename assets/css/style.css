@@ -1,0 +1,30 @@
+body {
+    background-image: url("../images/starwars.jpg");
+    background-repeat: no-repeat;
+    background-color: #fa9a32;
+    background-size: 100% 750px;
+    
+}
+#game {
+    color:white;
+    font-size: 18px;
+    font-weight: 700;
+    }
+
+input {
+color:white;
+}
+h1, h2 {
+    color:white;
+
+}
+
+.endGame {
+    color:white;
+    
+}
+
+#eg {
+    font-size: 150px;
+    font-weight: 500;
+}
